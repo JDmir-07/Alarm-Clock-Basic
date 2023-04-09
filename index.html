@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <main>
+        <div class="timer">
+            <img src="https://play-lh.googleusercontent.com/xjD5OP53BNscn5mxOfM-FFuwlrVpqX4z8dUguHfmBEvPqz_VqNONK_6S3oCxd4Gzvww" alt="clock-img">
+            <h1 class="current-time"><!-- here goes the actual time which will keep on ticking --></h1>
+        </div>
+        <section class="set-alarm">
+            <!-- here goes the set alarm props where you can change the time and set the alarm   -->
+            <div class="alarm-inputs">
+                <div class="input-time">
+                    <div class="hour">
+                        <!-- 
+                            NOTE ::
+                            Could have done it with <select> as well, found a lot of people have done it that way so went with a different approach
+                        -->
+                        <h2>Hour</h2>
+                        <div class="lists">
+                            <ul class="hour-select">
+                                <!-- (1 - 12) hour -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="minute">
+                        <h2>Minute</h2>
+                        <div class="lists">
+                            <ul class="minute-select" >
+                                <!-- (1-59) minute -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <h2>Second</h2>
+                        <div class="lists">
+                            <ul class="second-select">
+                                <!-- (1-59) seconds -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-btn">
+                    <div>
+                        <span class="hour-place">12</span> :
+                        <span class="minute-place">00</span> :
+                        <span class="second-place">00</span>
+                        <span class="meridiem" data-value="meridiem">PM</span>
+                    </div>
+                    <button type="button" data-value="add-alarm" class="btn">Set Alarm</button>
+                </div>
+            </div>
+        </section>
+        <section class="alarm-lists">
+            <h1 class="custom-h1">Alarms</h1>
+            <ul class="alarm-add">
+                <!-- <li> time          <button type='button'>Delete</button></li>    ---         this is the format in which all li's will be added-->
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
